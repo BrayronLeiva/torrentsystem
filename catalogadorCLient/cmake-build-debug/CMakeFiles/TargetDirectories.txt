@@ -1,0 +1,3 @@
+/home/brayron/CLionProjects/catalogadorCLient/cmake-build-debug/CMakeFiles/catalogadorCLient.dir
+/home/brayron/CLionProjects/catalogadorCLient/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/brayron/CLionProjects/catalogadorCLient/cmake-build-debug/CMakeFiles/rebuild_cache.dir
