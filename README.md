@@ -5,21 +5,21 @@ Description # Sistema de Torrent Distribuido en C
 Este proyecto implementa un sistema distribuido de transferencia de archivos inspirado en el modelo **BitTorrent**, desarrollado completamente en **C** con **sockets TCP** y soporte para múltiples conexiones concurrentes.  
 
 El sistema consta de dos programas principales:
-- **`main(2).c`**: Actúa como **tracker** y coordina la red.
-- **`main(3).c`**: Actúa como **peer** que puede enviar y recibir archivos directamente con otros peers.
+- **`catalogarizador`**: Actúa como **tracker** y coordina la red.
+- **`catalogarizadorClient.c`**: Actúa como **peer** que puede enviar y recibir archivos directamente con otros peers.
 
 ---
 
 ## 🔧 Funcionamiento general
 
-1. **Tracker (`main(2).c`)**
+1. **Tracker (`catalogarizador.c`)**
    - Se ejecuta primero y funciona como punto central de coordinación.
    - Cuando un peer se conecta:
      1. El peer envía su archivo binario con la lista de archivos que posee.
      2. El tracker actualiza la lista global y hace un *broadcast* de esta lista actualizada a todos los peers conectados.
    - Gracias a esta lista compartida, cada peer sabe **qué archivos tiene cada quién**, y puede dividir la carga de red solicitando partes de un archivo a múltiples peers en paralelo.
 
-2. **Peers (`main(3).c`)**
+2. **Peers (`catalogarizadorClient.c`)**
    - Se conectan al tracker y reciben la lista global de archivos.
    - Usan el archivo binario actualizado para saber:
      - Qué peers tienen el archivo que necesitan.
@@ -46,8 +46,8 @@ El tracker propaga este archivo binario actualizado a todos los peers conectados
 
 ## 🔄 Flujo de operación
 
-1️⃣ Ejecutar `main(2).c` en la máquina que actuará como tracker.  
-2️⃣ Ejecutar `main(3).c` en tantas máquinas como peers se deseen.  
+1️⃣ Ejecutar `catalogarizador.c` en la máquina que actuará como tracker.  
+2️⃣ Ejecutar `catalogarizadorClient.c` en tantas máquinas como peers se deseen.  
 3️⃣ Cada peer selecciona un directorio al iniciar, escaneando recursivamente todos los archivos para generar su archivo binario con metadatos.  
 4️⃣ Cuando un peer quiere descargar un archivo:
    - Consulta el archivo binario para ver qué peers lo tienen.
