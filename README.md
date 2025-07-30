@@ -68,7 +68,6 @@ El tracker propaga este archivo binario actualizado a todos los peers conectados
 
 ## 🖥️ Ejemplo de flujo
 
-sequenceDiagram
     participant PeerA
     participant Tracker
     participant PeerB
