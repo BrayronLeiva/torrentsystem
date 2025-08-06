@@ -100,3 +100,4 @@ The tracker propagates this updated binary file to all connected peers via broad
 
 
 ## Diagrams
+![Torrent_Syste](mainDiagram.png)
