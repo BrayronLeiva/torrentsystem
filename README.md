@@ -85,4 +85,11 @@ The tracker propagates this updated binary file to all connected peers via broad
 
 
 ## Diagrams
+When a computer (peer) connects to the network, it sends a list of its available files to the tracker. This list includes each file's name and a unique content-based hash, along with the peer's IP address and port number. The tracker then shares this updated list with all connected peers in the network.
+
+This way, when someone needs a file, they don't have to ask the tracker every time. Instead, they can check their local copy of the list to see which specific peers have the file they want, then connect directly to those peers to request the file chunks. The system works like a team - everyone knows what files others have, and can ask them directly for pieces of the files they need.
 ![Torrent_Syste](mainDiagram.png)
+
+Everyone has the binary files of all other computers, so they know which one to connect to when requesting a file. The binary file is very lightweight in terms of bytes.
+So, if someone wants to request a file, they simply establish a connection with the computers that have the file.
+![Torrent_Syste](secondDiagram.png)
