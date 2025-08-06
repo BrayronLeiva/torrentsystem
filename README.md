@@ -5,6 +5,21 @@ This is a torrent system implemented in C
 
 This project implements a distributed file transfer system inspired by the **BitTorrent** model, developed entirely in **C** using **TCP sockets** with support for multiple concurrent connections.
 
+# Skills
+
+![Threads](https://img.shields.io/badge/Topic-Threads-9C27B0?style=for-the-badge)
+![Hashing](https://img.shields.io/badge/Topic-Hashing-3F51B5?style=for-the-badge)
+![Recursion](https://img.shields.io/badge/Topic-Recursion-673AB7?style=for-the-badge)
+![Folder%20Exploration](https://img.shields.io/badge/Topic-Folder%20Exploration-4CAF50?style=for-the-badge)
+![Linux](https://img.shields.io/badge/OS-Linux-F44336?style=for-the-badge)
+![Networking](https://img.shields.io/badge/Topic-Networking-009688?style=for-the-badge)
+![File%20Splitting](https://img.shields.io/badge/Topic-File%20Splitting-FF9800?style=for-the-badge)
+![Binary%20Merge](https://img.shields.io/badge/Topic-Binary%20Merge-FFC107?style=for-the-badge)
+![Sockets](https://img.shields.io/badge/Topic-Sockets-795548?style=for-the-badge)
+![C](https://img.shields.io/badge/Language-C-2196F3?style=for-the-badge)
+![Torrent%20Protocol](https://img.shields.io/badge/Topic-Torrent%20Protocol-607D8B?style=for-the-badge)
+
+
 The system consists of two main programs:
 - **`cataloger`**: Acts as the **tracker** and coordinates the network.
 - **`catalogerClient.c`**: Acts as a **peer** that can send and receive files directly with other peers.
