@@ -82,21 +82,6 @@ The tracker propagates this updated binary file to all connected peers via broad
 
 ---
 
-## 🖥️ Example Flow
-
-    participant PeerA
-    participant Tracker
-    participant PeerB
-    participant PeerC
-
-    PeerA->>Tracker: Sends its metadata binary file.
-    Tracker->>PeerB: Broadcasts updated binary file.
-    Tracker->>PeerC: Broadcasts updated binary file.
-    PeerB->>PeerA: Requests chunk 1 of file X.
-    PeerC->>PeerA: Requests chunk 2 of file X.
-    PeerB->>PeerC: Requests chunk 3 of file X.
-    PeerB+PeerC->>PeerA: Sends chunks.
-    PeerB->>PeerB: Reconstructs file locally.
 
 
 ## Diagrams
