@@ -97,3 +97,6 @@ The tracker propagates this updated binary file to all connected peers via broad
     PeerB->>PeerC: Requests chunk 3 of file X.
     PeerB+PeerC->>PeerA: Sends chunks.
     PeerB->>PeerB: Reconstructs file locally.
+
+
+## Diagrams
